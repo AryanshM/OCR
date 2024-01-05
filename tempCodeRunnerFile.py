@@ -1,1 +1,1 @@
-wait
+print(ocr_result_original)
