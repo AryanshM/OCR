@@ -55,9 +55,14 @@ cv2.imwrite("./index_bBox.jpg", image)
 # print(ocr_result)
 
 # print(results)
-
+entities=[]
 for item in results:
     item=item.strip()
     item=item.split(" ")[0]
     # we are extracting the first word of each line
-    print(item)
+    if len(item) > 0:
+        if item[0].isupper() and "," not in item:
+            # printing only upper case words and that ensures we are only printing words
+            # also not includingg commas
+            print(item)
+
